@@ -22,6 +22,6 @@ public class Ponto {
     }
 
     public String toString(){
-        return "Ponto ("+pontox+", "+pontoy+")";
+        return String.format("(%.2f, %.2f)", pontox, pontoy);
     }
 }

@@ -5,8 +5,9 @@ public class Circulo {
     private double raio;
 
     public Circulo() {
-        centro = new Ponto(0, 0);
-        this.raio = 1;
+        //centro = new Ponto(0, 0);
+        //this.raio = 1;
+        this(0,0,1);
     }
 
         public Circulo(double x, double y, double umRaio) {
@@ -30,7 +31,7 @@ public class Circulo {
 
     @Override
     public String toString(){
-        return centro.toString()+
+        return "centro: " + centro.toString()+
                " raio: "  + this.raio   +
                " area: "  + this.area();
 
