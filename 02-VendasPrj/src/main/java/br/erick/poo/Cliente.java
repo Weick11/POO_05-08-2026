@@ -2,9 +2,9 @@ package br.erick.poo;
 
 public class Cliente {
     private String nome;
-    private String codigo;
+    private int codigo;
 
-    public Cliente(String cpf, String nome){
+    public Cliente(int cpf, String nome){
         this.nome = nome;
         codigo = cpf;
     }
@@ -13,7 +13,7 @@ public class Cliente {
         return nome;
     }
 
-    public String getCodigo(){
+    public int getCodigo(){
         return codigo;
     }
 

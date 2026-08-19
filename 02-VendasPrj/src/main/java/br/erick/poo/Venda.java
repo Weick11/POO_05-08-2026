@@ -1,37 +1,61 @@
 package br.erick.poo;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Venda {
-    private Cliente c;
+    private Cliente cliente;
     private ArrayList<ItemVenda> itens;
+    private int nroNF;
 
-    public Venda(Cliente c){
-        itens = new ArrayList<>();
-        this.c = c;
+    private static int proxNroNF = 1000;
+
+    public Venda(Cliente cli) {
+        this.cliente = cli;
+        this.itens = new ArrayList<>();
+        Venda.proxNroNF = Venda.proxNroNF + 1;
+        this.nroNF = proxNroNF;
     }
 
-    public boolean inserir(Produto p, int quantidade){
-        ItemVenda item = new ItemVenda(quantidade, p);
-        itens.add(item);
-        return true;
+    public static int getProxNF() {
+        return proxNroNF + 1;
     }
 
-    public double valorTotal(){
-        double valor = 0;
-        for(ItemVenda i: itens){
-            if(i != null){
-                valor += i.getValor();
-            }
+    public void inserir(Produto prod) {
+        this.inserir(1, prod);
+    }
+
+    public void inserir(int qtde, Produto prod) {
+        itens.add(new ItemVenda(qtde, prod));
+    }
+
+    public String getNotaFiscal() {
+        double total = 0;
+        StringBuilder nota = new StringBuilder("Exercício POO 2026/2\t");
+        nota.append(LocalDateTime.now().toLocalDate() + "\t");
+        nota.append("NF nro: " + this.nroNF + "\n");
+
+        nota.append("Comprador: " + cliente.getNome());
+        nota.append("\n- - - - - - - - - - - - - - - - - - - - - - -\n");
+        // não devemos mais usar for tradicional...
+        // for (int i = 0; i < itens.size(); i++) {
+        // ItemVenda item = lista.get(i);
+
+        // ... com foreach exatamente com o mesmo efeito...
+        for (ItemVenda item : itens) {
+            nota.append(item.getDetalhe() + "\n");
+            // nota.append("\n");
+            total = total + item.getValor();
         }
-        return valor;
+
+        nota.append("\n- - - - - - - - - - - - - - - - - - - - - - -\n");
+        nota.append(String.format("     \t\t\tTotal: R$ %.2f\n\n", total));
+        return nota.toString();
     }
 
-    public String toString(){
-        String resultado = String.format("Cliente: %s\nProdutos:", c.toString());
-        for(ItemVenda i: itens){
-            if(i != null)
-                resultado += i.toString();
-        }
-        return resultado;
+    @Override
+    public String toString() {
+        return "Venda [cliente=" + cliente + ", itens=" + itens + "]";
     }
+
 }
