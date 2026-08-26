@@ -1,7 +1,7 @@
 package br.erick.poo;
 
 public class ProdutoAlcoolico extends Produto{
-    private final double TAXA_TRAGO = 2;
+    private static final double TAXA_TRAGO = 2;
 
     public ProdutoAlcoolico(int codigo, String nome, double preco){
         super(codigo, nome, preco);
