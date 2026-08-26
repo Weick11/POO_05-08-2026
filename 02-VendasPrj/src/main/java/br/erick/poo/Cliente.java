@@ -4,9 +4,14 @@ public class Cliente {
     private String nome;
     private int codigo;
 
-    public Cliente(int cpf, String nome){
+    public Cliente(int codigo, String nome){
         this.nome = nome;
-        codigo = cpf;
+        this.codigo = codigo;
+    }
+
+    public Cliente(){
+        this.nome = "Não Informado!";
+        codigo = -1;
     }
 
     public String getNome(){

@@ -1,4 +1,4 @@
-package br.pucrs.poo;
+package br.erick.poo;
 
 public class App {
 
