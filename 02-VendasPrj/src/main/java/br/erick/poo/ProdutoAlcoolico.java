@@ -11,6 +11,10 @@ public class ProdutoAlcoolico extends Produto{
         return TAXA_ALCOOLICO;
     }
 
+    public double getPreco(){
+        return super.getPreco() * TAXA_ALCOOLICO;
+    }
+
     public String toString(){
         return super.toString() +" Taxa para produtos alcoolicos: 200%";
     }
