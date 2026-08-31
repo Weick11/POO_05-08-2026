@@ -16,4 +16,7 @@ public class ClientePJ extends Cliente{
         return super.toString() + " CNPJ: "+cnpj;
     }
 
+    public String getID(){
+        return cnpj;
+    }
 }

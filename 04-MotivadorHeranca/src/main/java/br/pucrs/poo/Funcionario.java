@@ -1,4 +1,4 @@
-package br.erick.poo;
+package br.pucrs.poo;
 
 public class Funcionario{
     public static final double LIM_ISENCAO_IR = 2000;

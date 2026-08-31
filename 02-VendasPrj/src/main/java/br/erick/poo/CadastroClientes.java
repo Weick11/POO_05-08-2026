@@ -27,8 +27,8 @@ public class CadastroClientes {
         lista.add(cli);
     }
 
-    public void inserir(int umCod, String umNome) {
-        Cliente novo = new Cliente(umCod, umNome);
+    public void inserirPF(int umCod, String umNome, String cpf) {
+        Cliente novo = new ClientePF(umCod, umNome, cpf);
         lista.add(novo);
         lista.add(new Cliente(umCod, umNome));
     }
@@ -41,23 +41,13 @@ public class CadastroClientes {
         return null;
     }
 
-    // public Cliente pesquisar(String cod) {
-    //     for (Cliente cli : lista) {
-
-    //         // ruim!!!
-    //         // if (cli instanceof ClientePF) {
-    //         // ClientePF pf = (ClientePF)cli;
-    //         // if ( pf.getCPF().equals(cod) ) {
-    //         // //if ( ((ClientePF)cli).getCPF().equals(cod) ) {
-    //         // return cli;
-    //         // }
-    //         // }
-    //         if (cli.getID().equals(cod))
-    //             return cli;
-
-    //     }
-    //     return null;
-    // }
+   public Cliente pesquisar(String id) {
+        for (Cliente cli : lista) {
+            if (cli.getID().equals(id))
+                return cli;
+        }
+        return null;
+    }
 
     public String toString() {
         /*

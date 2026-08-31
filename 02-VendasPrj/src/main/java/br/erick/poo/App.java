@@ -5,8 +5,8 @@ public class App {
     public static void main(String[] args) {
         // teste de criação de clientes
         Cliente c1;
-        c1 = new Cliente(123, "Sr. Smith");
-        Cliente c2 = new Cliente(321, "John Doe");
+        c1 = new ClientePF(123, "Sr. Smith", "123.456.789-00");
+        Cliente c2 = new ClientePJ(321, "John Doe", "321.456.789-00");
         System.out.println();
         System.out.println(c1.toString());
         System.out.println("c2: " + c2.getCodigo() + " " + c2.getNome());

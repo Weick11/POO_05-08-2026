@@ -15,4 +15,8 @@ public class ClientePF extends Cliente{
     public String toString(){
         return super.toString() + "CPF: "+ cpf;
     }
+
+    public String getID(){
+        return cpf;
+    }
 }

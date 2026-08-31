@@ -1,4 +1,4 @@
-package br.erick.poo;
+package br.pucrs.poo;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
 package br.erick.poo;
 
-public class Cliente {
+public abstract class Cliente {
     private String nome;
     private int codigo;
 
@@ -13,6 +13,8 @@ public class Cliente {
         this.nome = "Não Informado!";
         codigo = -1;
     }
+
+    public abstract String getID();
 
     public String getNome(){
         return nome;

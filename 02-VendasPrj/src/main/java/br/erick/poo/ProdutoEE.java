@@ -10,13 +10,13 @@ public class ProdutoEE extends Produto{
         this.garantia = garantia;
         diaCompra = LocalDate.now();
     }
-    
-    public LocalDate getGarantia(){
-        return diaCompra.plusDays(garantia);
+
+    public String getGarantia(){
+        return String.format("Nome do Produto: %s\nCodigo: %d\nDia da Compra: %s\nVencimento da Garantia: %s", super.getNome(), super.getCodigo(), diaCompra, diaCompra.plusDays(garantia));
     }
 
     public String toString(){
-        return super.toString() + "Garantia: "+ garantia;
+        return super.toString() + "Garantia: "+ garantia+ " dias.";
     }
 
 }
