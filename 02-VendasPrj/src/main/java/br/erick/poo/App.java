@@ -15,7 +15,7 @@ public class App {
         CadastroClientes cadCli = CadastroClientes.getInstance();
         cadCli.inserir(c1);
         cadCli.inserir(c2);
-        cadCli.inserir(127, "Tio Patinhas");
+        cadCli.inserirPF(127, "Tio Patinhas", "127.456.789-00");
 
         CadastroClientes outroCad = CadastroClientes.getInstance();
         System.out.println(cadCli);
