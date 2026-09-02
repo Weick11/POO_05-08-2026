@@ -1,7 +1,7 @@
 package br.erick.poo;
 
 public class ProdutoAlcoolico extends Produto{
-    private static double TAXA_TRAGO = 2;
+    private static double TAXA_TRAGO;
 
     public ProdutoAlcoolico(int codigo, String nome, double preco, double TAXA){
         super(codigo, nome, preco);
@@ -18,7 +18,7 @@ public class ProdutoAlcoolico extends Produto{
 
     @Override
     public double getPreco(){
-        return (super.getPreco() * TAXA_TRAGO)/100;
+        return super.getPreco() + (super.getPreco() * TAXA_TRAGO)/100;
     }
 
     public String toString(){
