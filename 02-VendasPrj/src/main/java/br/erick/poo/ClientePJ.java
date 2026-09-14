@@ -1,5 +1,6 @@
 package br.erick.poo;
 
+
 public class ClientePJ extends Cliente{
     private String cnpj;
 

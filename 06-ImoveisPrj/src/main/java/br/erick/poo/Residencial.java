@@ -19,7 +19,8 @@ public class Residencial extends Imovel{
 
     @Override
     public String toString(){
-        String resultado = String.format("%s\nÁrea do Terreno: %d\n", super.toString(), areaTerreno);
+        String resultado = "Residencial -";
+        resultado += String.format("%s\nÁrea do Terreno: %d\n", super.toString(), areaTerreno);
         if(areaTerreno > 1000) resultado += String.format("Acréscimo de R$%.2f ao imposto do terreno", getVR()*100);
         resultado += String.format("Valor Total do Imposto: %.2f", calculaImposto());
         return resultado;

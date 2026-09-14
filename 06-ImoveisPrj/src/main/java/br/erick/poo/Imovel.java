@@ -36,6 +36,6 @@ public abstract class Imovel {
     public abstract double calculaImposto();
 
     public String toString(){
-        return String.format("Proprietário do Imóvel: %s\nÁrea de Construção %dm²\nLocalização: %s\nValor do Imposto %.2f/m²", proprietario, areaConstruida, localizacao.toString(), vr);
+        return String.format("Proprietário do Imóvel: %s\nÁrea de Construção %dm²\nLocalização: %s\nValor do Imposto R$%.2f/m²", proprietario, areaConstruida, localizacao.toString(), vr);
     }
 }
