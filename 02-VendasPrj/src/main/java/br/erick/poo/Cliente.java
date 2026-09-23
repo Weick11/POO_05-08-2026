@@ -5,6 +5,8 @@ public abstract class Cliente {
     private int codigo;
 
     public Cliente(int codigo, String nome){
+        if(nome == null || nome == "")
+            throw new IllegalArgumentException("Nome Inválido");
         this.nome = nome;
         this.codigo = codigo;
     }

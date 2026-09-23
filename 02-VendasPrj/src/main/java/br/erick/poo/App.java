@@ -71,7 +71,7 @@ public class App {
         Venda v3 = new Venda(cadCli.pesquisar(127));
 
         v3.inserir(cadProd.pesquisar(4));
-
+        
         System.out.println(v3.getNotaFiscal());
 
         System.out.println("\n\nPróxima venda será a de número: " +

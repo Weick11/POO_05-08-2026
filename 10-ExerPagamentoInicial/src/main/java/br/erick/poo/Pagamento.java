@@ -1,7 +1,6 @@
 package br.erick.poo;
 
 import java.time.LocalDate;
-import java.util.Comparable;
 /**
  * Classe abstrata que representa um pagamento genérico no marketplace.
  * Reúne o que toda forma de pagamento tem em comum (dados + notificação +
